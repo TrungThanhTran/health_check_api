@@ -8,7 +8,7 @@ import time
 def _call_json_api(api_url, json_data):
         start = time.time()
         try:
-            response = requests.post(api_url, json=json_data, timeout=10000)
+            response = requests.post(api_url, json=json_data, timeout=60)
         except ConnectTimeout:
             print('Request has timed out')
 
